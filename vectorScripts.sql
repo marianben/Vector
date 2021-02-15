@@ -72,4 +72,13 @@ INSERT INTO Supplier( supplier_name,city,country)
  
 insert into Products( products_name,supplier_fk_id, category_fk_id,price)
   values('Green tea','6','1',10.00) ;      
+  /*
+  or 
+  SELECT DISTINCT Supplier.SupplierName, Supplier.City, Supplier.Country
+ FROM (( Supplier INNER JOIN Products ON Supplier.SupplierID = Products.supplier_fk_id)
+ INNER JOIN Categories ON Products.category_fk_id = Categories.CategoryID)
+ WHERE Categories.CategoryName = 'Condiments';
+  
+  */
+  
   
